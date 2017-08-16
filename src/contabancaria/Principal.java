@@ -5,6 +5,8 @@
  */
 package contabancaria;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author robso
@@ -19,8 +21,37 @@ public class Principal {
         conta01.cpf = "0043583119-78";
         conta01.limite = 500.00;
         conta01.saldo = 900.00;
-        conta01.saque();
-        conta01.deposito();
+        
+        char opcao = JOptionPane.showInputDialog("Escolha uma opção: \n D - Deposito \n S - Saque \n T - Transferencia \n P - Pagamentos").charAt(0);
+        
+        
+        
+        
+        switch(opcao){
+            
+            case 'D':
+                conta01.deposito();
+            break;
+            
+            case 'S':
+                conta01.saque();
+             break;
+             
+            case 'T':
+            break;
+            
+            case 'P':
+             break;
+             
+            default:
+                JOptionPane.showMessageDialog(null,"Opção Invalida");
+            
+            
+                       
+            
+        }
+        
+        
         
         
         
