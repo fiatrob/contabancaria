@@ -19,7 +19,13 @@ public void saque(){
     saldo = saldo - valorSaque;    
     JOptionPane.showMessageDialog(null, "Seu Novo Saldo é "+saldo);
     }
-    else{
+    else if(limite >= valorSaque){
+        limite = limite - valorSaque;
+        JOptionPane.showMessageDialog(null, "Você esta devendo"+valorSaque);
+        
+    }
+    
+    else {
         JOptionPane.showMessageDialog(null, "Tá sem grana parça");
     }
        

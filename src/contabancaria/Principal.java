@@ -22,12 +22,16 @@ public class Principal {
         conta01.limite = 500.00;
         conta01.saldo = 900.00;
         
-        char opcao = JOptionPane.showInputDialog("Escolha uma opção: \n D - Deposito \n S - Saque \n T - Transferencia \n P - Pagamentos").charAt(0);
+        char opcao1 = 'z';
+        //JOptionPane.showInputDialog("Escolha uma opção: \n D - Deposito \n S - Saque \n T - Transferencia \n P - Pagamentos").charAt(0);
         
         
         
-        
-        switch(opcao){
+        while(opcao1 !='X' ){
+           char opcao = JOptionPane.showInputDialog("Escolha uma opção: \n D - Deposito \n S - Saque \n T - Transferencia \n P - Pagamentos").charAt(0);
+       
+            
+            switch(opcao){
             
             case 'D':
                 conta01.deposito();
@@ -43,12 +47,18 @@ public class Principal {
             case 'P':
              break;
              
+            case 'x':
+                JOptionPane.showMessageDialog(null, "Ate logo!!");
+                System.exit(0);
+                break;
+             
             default:
                 JOptionPane.showMessageDialog(null,"Opção Invalida");
             
             
                        
             
+        }
         }
         
         
