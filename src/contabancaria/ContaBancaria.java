@@ -28,10 +28,6 @@ public void saque(){
     else {
         JOptionPane.showMessageDialog(null, "Tá sem grana parça");
     }
-       
-    
-    
-
 }
 public void deposito(){
     
