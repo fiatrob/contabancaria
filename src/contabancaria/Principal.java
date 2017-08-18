@@ -22,6 +22,16 @@ public class Principal {
         conta01.limite = 500.00;
         conta01.saldo = 900.00;
         
+        
+         ContaBancaria conta02 = new ContaBancaria();
+        conta02.nroAgencia = "2365-5";
+        conta02.nroConta = "4531-89";
+        conta02.nome = "Maria Argentina";
+        conta02.cpf = "1236544-96";
+        conta02.limite = 900.00;
+        conta02.saldo = 900.00;
+        
+        
         char opcao1 = 'z';
         //JOptionPane.showInputDialog("Escolha uma opção: \n D - Deposito \n S - Saque \n T - Transferencia \n P - Pagamentos").charAt(0);
         
@@ -42,6 +52,7 @@ public class Principal {
              break;
              
             case 'T':
+                conta01.transferencia(conta01, conta02);
             break;
             
             case 'P':
