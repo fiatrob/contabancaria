@@ -41,7 +41,11 @@ public void deposito(){
         JOptionPane.showMessageDialog(null, "Trabalhe mais e depoiste um valor maior");
     }
 }
-public void transferencia(){
+public void transferencia(ContaBancaria c1, ContaBancaria c2){
+    c1.saque();
+    c2.deposito();
+    
+    
     
 }
 public void pagamento(){
